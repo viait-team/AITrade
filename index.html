@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE, PEG and Fair Value</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h1>PE, PEG and Fair Value (August 24, 2025)</h1>
+     
+        <p>Fair value is the price at which the present value of future earnings (or cash flow), compounded at the expected growth rate, equals or exceeds the price paid — within a reasonable time horizon, 10 years.</p>
+        <p> For Example, </p>
+        <p><code>PE = 20, PEG = 1, within 10 years, the cumulative EPS is ~$25</code><br>
+        The price you paid is earned back by the company. If the company distributes all, you did not lose, but have made <code>$5</code> more over the <code>$20</code> you paid. That is the "Fair Value".</p>
+
+        <h2>Mathematical Expression</h2>
+        <p>Let’s express it without abstraction:</p>
+        <p>Let:</p>
+        <ul>
+            <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span> = initial earnings</li>
+            <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> = intrinsic earnings growth rate</li>
+            <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> = time horizon</li>
+            <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> = current market price</li>
+        </ul>
+        <p>Then:</p>
+        <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>g</mi><mo>=</mo><mfrac><mtext>PE</mtext><mtext>PEG</mtext></mfrac><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">g = \frac{\text{PE}}{\text{PEG}}  \%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">PEG</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">PE</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">%</span></span></span></span></span></p>
+        <p>And the structural earnings accumulation condition becomes:</p>
+        <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></munderover><msub><mi>E</mi><mn>0</mn></msub><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false">)</mo><mi>t</mi></msup><mo>≥</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\sum_{t=1}^{T} E_0 \cdot (1 + g)^t \geq P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0936em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></span></p>
+        <p>or<br>
+        <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false">)</mo><mi>t</mi></msup><mo>≥</mo><mi>P</mi><mi mathvariant="normal">/</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">\sum_{t=1}^{T} (1 + g)^t \geq P/E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0936em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></span></p>
+        <p>This is not discounted—because you're modeling real earnings accumulation, not nominal pricing games. It's a compounding engine that must structurally earn back its valuation.</p>
+        <hr>
+
+        <!-- The rest of the content for WMT and TGT follows here, identical to the previous HTML example -->
+        <h2>Walmart Inc. (WMT) "Fair Value" Valuation </h2>
+        <h3>TTM (Trailing Twelve Months) Metrics </h3>
+        <ul>
+            <li><strong>Price</strong>: $96.83</li>
+            <li><strong>EPS (TTM)</strong>: $2.66</li>
+            <li><strong>P/E Ratio</strong>: 36.40</li>
+            <li><strong>EPS Growth (YoY)</strong>: 9.67%</li>
+            <li><strong>PEG Ratio</strong>: 3.76</li>
+        </ul>
+        <h3>Break-Even Time (TTM EPS, No Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: ~36 years <em>(Calculation: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>96.83</mn><mo>÷</mo></mrow><annotation encoding="application/x-tex">96.83 ÷</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">96.83</span><span class="mord">÷</span></span></span></span>2.66)</em></li>
+        </ul>
+        <h3>Break-Even Time (TTM EPS, 9.67% Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: ~16–17 years <em>(Cumulative EPS reaches $96.83 in Year 17)</em></li>
+        </ul>
+        <h3>Forward-Looking Estimates (FY Jan 2026) </h3>
+        <ul>
+            <li><strong>Forward EPS</strong>: $2.64</li>
+            <li><strong>Forward EPS Growth Rate</strong>: 11.96%</li>
+            <li><strong>Forward P/E Ratio</strong>: 36.68</li>
+            <li><strong>Forward PEG Ratio</strong>: ~3.07</li>
+        </ul>
+        <h3>Break-Even Time (Forward EPS, 11.96% Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: ~15–16 years <em>(Cumulative EPS reaches $96.83 in Year 15)</em></li>
+        </ul>
+        <h3>Insights </h3>
+        <ul>
+            <li><strong>TTM growth</strong> paints a reasonable picture, but the break-even is outside a 10-year horizon.</li>
+            <li><strong>Forward estimates</strong> suggest slightly better growth, shortening the payback period.</li>
+            <li><strong>PEG ratios</strong> are above 1, suggesting the stock price is high relative to its expected earnings growth.</li>
+        </ul>
+        <hr>
+        <h2>Target Corporation (TGT) "Fair Value" Valuation </h2>
+        <h3>TTM (Trailing Twelve Months) Metrics</h3>
+        <ul>
+            <li><strong>Price</strong>: $99.24</li>
+            <li><strong>EPS (TTM)</strong>: $8.58</li>
+            <li><strong>P/E Ratio</strong>: 11.57</li>
+            <li><strong>EPS Growth (YoY)</strong>: -15.72%</li>
+            <li><strong>PEG Ratio</strong>: -0.74 (Not meaningful due to negative growth)</li>
+        </ul>
+        <h3>Break-Even Time (TTM EPS, No Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: ~11.6 years <em>(Calculation: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>99.24</mn><mo>÷</mo></mrow><annotation encoding="application/x-tex">99.24 ÷</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">99.24</span><span class="mord">÷</span></span></span></span>8.58)</em></li>
+        </ul>
+        <h3>Break-Even Time (TTM EPS, -15.72% Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: Does not break even with such a large sustained negative growth. <em>(If earnings were to decline by 15.72% annually, the total cumulative earnings would cap at ~$54.58, never reaching the $99.24 price.)</em></li>
+        </ul>
+
+        <h2>Forward-Looking Estimates (FY Jan 2026) </h2>
+        <ul>
+            <li><strong>Forward EPS</strong>: $7.47</li>
+            <li><strong>Forward EPS Growth Rate</strong>: 8.67%</li>
+            <li><strong>Forward P/E Ratio</strong>: 13.28</li>
+            <li><strong>Forward PEG Ratio</strong>: ~1.53</li>
+        </ul>
+        <h3>Break-Even Time (Forward EPS, 8.67% Growth) </h3>
+        <ul>
+            <li><strong>Years to break even</strong>: ~9–10 years <em>(Cumulative EPS reaches $99.24 in Year 10)</em></li>
+        </ul>
+        
+        <h2>Insights </h2>
+        <ul>
+            <li><strong>TTM valuation</strong> is challenged by negative recent growth.</li>
+            <li><strong>Forward metrics</strong> suggest a return to growth, with a more attractive break-even timeline within the 10-year horizon.</li>
+            <li>The <strong>Forward PEG ratio</strong> being over 1 suggests the market is pricing in the expected recovery in earnings growth.</li>
+        </ul>
+
+         <hr/>
+    This detailed data culminates in the following head-to-head comparison and final verdict: <a href="WMT_vs_TGT_Fair_Value.html">WMT vs TGT</a>.
+  
+    </div>
+     <hr/>
+    <!-- The container that will determine the chart's size -->
+    <div id="chart-container">
+        <!-- The SVG is inside. Let CSS handle its size. -->
+        <svg id="my-chart"></svg>
+    </div>
+
+    <script src="graph.js"></script>
+</body>
+</html>
